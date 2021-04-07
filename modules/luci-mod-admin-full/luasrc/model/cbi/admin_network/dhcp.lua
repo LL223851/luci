@@ -57,6 +57,11 @@ s:taboption("files", Flag, "nohosts",
 
 s:taboption("files", DynamicList, "addnhosts",
 	translate("Additional Hosts files")).optional = true
+	
+aaaa = s:taboption("advanced", Flag, "filter_aaaa",
+	translate("Disable IPv6 DNS forwards"),
+	translate("Filter IPv6(AAAA) DNS Query Name Resolve"))
+aaaa.optional = true
 
 qu = s:taboption("advanced", Flag, "quietdhcp",
 	translate("Suppress logging"),
@@ -131,13 +136,6 @@ bn = s:taboption("advanced", DynamicList, "bogusnxdomain", translate("Bogus NX D
 
 bn.optional = true
 bn.placeholder = "67.215.65.132"
-
-fl = s:taboption("advanced", Value, "fil_iplist",
-	translate("IP list for DNS Filter"),
-	translate("IP list for dnsmasq to select a server.By using this, dnsmasq will only forward the reply from servers in this list if the replied ip is in the list."..
-		"Or it will forward the reply from other servers.<br />Leave empty to disable this feature."))
-fl:depends("allservers", "1")
-fl.optional = true
 
 s:taboption("general", Flag, "logqueries",
 	translate("Log queries"),
@@ -227,6 +225,13 @@ cs = s:taboption("advanced", Value, "cachesize",
 cs.optional = true
 cs.datatype = "range(0,10000)"
 cs.placeholder = 150
+
+minittl = s:taboption("advanced", Value, "mini_ttl",
+	translate("Minimum TTL to send to clients"),
+	translate("Modify DNS entries minimum TTL (max is 86400, 0 is no modify)"))
+minittl.optional = true
+minittl.datatype = "range(0,86400)"
+minittl.placeholder = 0
 
 s:taboption("tftp", Flag, "enable_tftp",
 	translate("Enable TFTP server")).optional = true
