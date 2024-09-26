@@ -171,6 +171,9 @@ msgstr "ANSI T1.413"
 msgid "APN"
 msgstr "APN"
 
+msgid "Architecture"
+msgstr "架构"
+
 msgid "ARP retry threshold"
 msgstr "ARP 重试阈值"
 
@@ -254,8 +257,14 @@ msgstr "额外的 HOSTS 文件"
 msgid "Disable IPv6 DNS forwards"
 msgstr "禁止解析 IPv6 DNS 记录"
 
+msgid "Disable IPv4 DNS forwards"
+msgstr "禁止解析 IPv4 DNS 记录"
+
 msgid "Filter IPv6(AAAA) DNS Query Name Resolve"
 msgstr "过滤掉 IPv6(AAAA) ，只返回 IPv4 DNS 域名记录"
+
+msgid "Filter IPv4(A) DNS Query Name Resolve"
+msgstr "过滤掉 IPv4(A) ，只返回 IPv6 DNS 域名记录"
 
 msgid "Minimum TTL to send to clients"
 msgstr "客户端缓存的最小 DNS TTL"
@@ -295,6 +304,9 @@ msgstr "顺序分配 IP"
 msgid "Allow <abbr title=\"Secure Shell\">SSH</abbr> password authentication"
 msgstr "允许 <abbr title=\"Secure Shell\">SSH</abbr> 密码验证"
 
+msgid "Allow AP mode to disconnect STAs based on low ACK condition"
+msgstr "允许 AP 模式基于低 ACK 条件判断剔除弱信号的客户端"
+
 msgid "Allow all except listed"
 msgstr "仅允许列表外"
 
@@ -332,6 +344,11 @@ msgstr ""
 
 msgid "Always announce default router"
 msgstr "总是通告默认路由"
+
+msgid ""
+"Always use 40MHz channels even if the secondary channel overlaps. Using this "
+"option does not comply with IEEE 802.11n-2009!"
+msgstr "强制启用 40MHz 频宽并忽略辅助信道重叠。此选项可能不兼容某些无线硬件导致无法启用!"
 
 msgid "Annex"
 msgstr "Annex"
@@ -899,6 +916,9 @@ msgstr "禁用"
 msgid "Disabled (default)"
 msgstr "禁用（默认）"
 
+msgid "Disassociate On Low Acknowledgement"
+msgstr "弱信号剔除"
+
 msgid "Discard upstream RFC1918 responses"
 msgstr "丢弃 RFC1918 上行响应数据"
 
@@ -1058,6 +1078,10 @@ msgstr "启用流入数据包镜像"
 
 msgid "Enable mirroring of outgoing packets"
 msgstr "启用流出数据包镜像"
+
+msgid ""
+"Enable packet steering across all CPUs. May help or hinder network speed."
+msgstr "启用数据包多核负载均衡。 可能会增强网络转发性能。"
 
 msgid "Enable the DF (Don't Fragment) flag of the encapsulating packets."
 msgstr "启用后报文的 DF（禁止分片）标志。"
@@ -1226,6 +1250,9 @@ msgstr "刷写中..."
 msgid "Force"
 msgstr "强制"
 
+msgid "Force 40MHz mode"
+msgstr "强制 40MHz 频宽"
+
 msgid "Force CCMP (AES)"
 msgstr "强制 CCMP（AES）"
 
@@ -1381,6 +1408,9 @@ msgstr "主机到期超时"
 msgid "Host-<abbr title=\"Internet Protocol Address\">IP</abbr> or Network"
 msgstr "主机 <abbr title=\"Internet Protocol Address\">IP</abbr> 或网络"
 
+msgid "Host-Uniq tag content"
+msgstr "Host-Uniq 标签内容"
+
 msgid "Hostname"
 msgstr "主机名"
 
@@ -1494,6 +1524,15 @@ msgstr "IPv6 后缀"
 
 msgid "IPv6-Address"
 msgstr "IPv6 地址"
+
+msgid "Remote IPv6 address"
+msgstr "远程 IPv6 地址"
+
+msgid "Encapsulation limit"
+msgstr "封装限制"
+
+msgid "When delegating prefixes to multiple downstreams, interfaces with a higher preference value are considered first when allocating subnets."
+msgstr "将前缀委派给多个下游时，在分配子网时，将首先考虑具有较高优先级值的接口。"
 
 msgid "IPv6-PD"
 msgstr "IPv6-PD"
@@ -2376,6 +2415,9 @@ msgstr "软件包列表已超过 24 小时未更新"
 msgid "Package name"
 msgstr "软件包名称"
 
+msgid "Packet Steering"
+msgstr "数据包负载均衡"
+
 msgid "Packets"
 msgstr "数据包"
 
@@ -2581,6 +2623,9 @@ msgstr "Radius 认证密钥"
 
 msgid "Radius-Authentication-Server"
 msgstr "Radius 认证服务器"
+
+msgid "Raw hex-encoded bytes. Leave empty unless your ISP require this"
+msgstr "原始 16 进制编码的字节。除非您的运营商要求，否则请留空"
 
 msgid ""
 "Read <code>/etc/ethers</code> to configure the <abbr title=\"Dynamic Host "
@@ -3846,7 +3891,7 @@ msgid "overlay"
 msgstr "覆盖"
 
 msgid "random"
-msgstr ""
+msgstr "随机"
 
 msgid "relay mode"
 msgstr "中继模式"
@@ -4075,3 +4120,27 @@ msgstr "启用 256-QAM"
 
 msgid "802.11n 2.4Ghz Only"
 msgstr "只适合 802.11n 2.4Ghz"
+
+msgid "tagged"
+msgstr "已标记"
+
+msgid "untagged"
+msgstr "未标记"
+
+msgid "Compatible Mode"
+msgstr "兼容模式"
+
+msgid "High Performing Mode"
+msgstr "高性能模式"
+
+msgid "Target Platform"
+msgstr "目标平台"
+
+msgid "Beacon Interval"
+msgstr "Beacon间隔"
+
+msgid "Kick STA Threshold"
+msgstr "弱信号剔除阈值"
+
+msgid "STA Assoc Threshold"
+msgstr "弱信号接入阈值"

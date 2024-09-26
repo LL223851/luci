@@ -63,6 +63,11 @@ aaaa = s:taboption("advanced", Flag, "filter_aaaa",
 	translate("Filter IPv6(AAAA) DNS Query Name Resolve"))
 aaaa.optional = true
 
+a = s:taboption("advanced", Flag, "filter_a",
+	translate("Disable IPv4 DNS forwards"),
+	translate("Filter IPv4(A) DNS Query Name Resolve"))
+a.optional = true
+
 qu = s:taboption("advanced", Flag, "quietdhcp",
 	translate("Suppress logging"),
 	translate("Suppress logging of the routine operation of these protocols"))
